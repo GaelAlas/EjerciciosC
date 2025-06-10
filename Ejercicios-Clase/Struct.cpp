@@ -13,7 +13,7 @@ float Cum(float arregloNota[], float arregloUV[]){
     }
     cumTotal=sumaCum/uvs;
 
-    return sumaCum;
+    return cumTotal;
 };
 
 struct Persona{
@@ -28,13 +28,22 @@ int main(){
     float notas[3];
     float uv[3];
     string materias[3];
-
+    float cum;
+    int cantidad;
+    Persona Estudiante[cantidad];
+    
     for(int i=0; i<3; i++){
         cout<<"Ingrese la materia "<<i+1<<": "; cin>>materias[i];
         cout<<"Ingrese las unidades valorativas de la materia "<<i+1<<": "; cin>>uv[i];
+        cout<<"Ingrese la nota de la materia "<<i+1<<": "; cin>>notas[i];
+        
     }
 
+    cum=Cum(notas, uv);
+
     
+
+
 
 
     return 0;
